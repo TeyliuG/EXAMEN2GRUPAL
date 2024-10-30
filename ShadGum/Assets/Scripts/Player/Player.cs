@@ -30,4 +30,8 @@ public class Player : MonoBehaviour
     {
         SceneManager.LoadScene("Derrota");
     }
+    public void AddHealth()
+    {
+        Health += 10;
+    }
 }
