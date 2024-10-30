@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8120202838738344796}
   - component: {fileID: 8175507039686340659}
   - component: {fileID: -8242312709931269081}
-  - component: {fileID: 84741364447197518}
+  - component: {fileID: 952430231479060152}
   m_Layer: 0
-  m_Name: Zombie Ensangrentado
+  m_Name: Zombie rapido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.37728637, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.99862754, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &84741364447197518
+--- !u!114 &952430231479060152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,4 +162,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
-  enemySpeed: 10
+  enemySpeed: 20
