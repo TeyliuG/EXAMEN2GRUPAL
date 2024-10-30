@@ -9,6 +9,18 @@ public class PuntosMejora : MonoBehaviour
     public int upgradeLevel = 0;   
     public int maxUpgradeLevel = 5;
 
+    public void buyDamage()
+    {
+        PlayerBullet playerbullet = GetComponent<PlayerBullet>();
+        if (playerPoints >= upgradeCost && upgradeLevel < maxUpgradeLevel)
+        {
+            playerPoints -= upgradeCost;
+            upgradeLevel++;
+            upgradeCost += 25;
+            playerbullet.AddDamage();
+        }
+    }
+
     public void PurchaseUpgrade()
     {
         if (playerPoints >= upgradeCost && upgradeLevel < maxUpgradeLevel)
@@ -17,7 +29,6 @@ public class PuntosMejora : MonoBehaviour
             upgradeLevel++;              
             upgradeCost += 25;           
 
-            Debug.Log("Compra realizada. Nivel de mejora: " + upgradeLevel + ", Puntos restantes: " + playerPoints);
         }
         else if (upgradeLevel >= maxUpgradeLevel)
         {
