@@ -21,8 +21,8 @@ public class PlayerBullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            //Enemy enemy = collision.GetComponent<Enemy>();
-            //enemy.TakeDamage(Damage);
+            Enemy3 enemy = collision.GetComponent<Enemy3>();
+            enemy.RecibirDaño(Damage);
             Destroy(gameObject);
         }
     }
