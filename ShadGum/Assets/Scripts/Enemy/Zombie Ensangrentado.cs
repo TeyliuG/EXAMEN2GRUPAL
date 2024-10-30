@@ -9,7 +9,6 @@ public class ZombieEnsangrentado : MonoBehaviour
     [SerializeField] private float SpeedEnemy = 3.0f;
     [SerializeField] private int DamageEnemy = 3;
     [SerializeField] private float AttackRateEnemy = 1.0f;
-    [SerializeField] private int PointsEnemy = 10;
     public Player player;
 
     public Transform Follow;
@@ -17,6 +16,7 @@ public class ZombieEnsangrentado : MonoBehaviour
     void Start()
     {
         player = FindFirstObjectByType<Player>();
+        Follow = player.transform;
     }
 
     void Update()

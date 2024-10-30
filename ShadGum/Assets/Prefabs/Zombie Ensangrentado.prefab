@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8120202838738344796}
   - component: {fileID: 8175507039686340659}
   - component: {fileID: -8242312709931269081}
-  - component: {fileID: 84741364447197518}
+  - component: {fileID: -7424804022638854217}
   m_Layer: 0
   m_Name: Zombie Ensangrentado
   m_TagString: Untagged
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &84741364447197518
+--- !u!114 &-7424804022638854217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,8 +158,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5166786741291213102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d175b50e5608aad49b7510b176ad096b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e7aac99c0ec81c458ac796df4440161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 5
-  enemySpeed: 10
+  HealthEnemy: 4
+  SpeedEnemy: 3
+  DamageEnemy: 3
+  AttackRateEnemy: 1
+  player: {fileID: 0}
+  Follow: {fileID: 0}
