@@ -12,11 +12,12 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private Transform shootPoint;
     void Start()
     {
-        
+
     }
 
     void Update()
     {
+        FindClosestEnemy();
         AimAtClosestEnemy();
         if (Input.GetMouseButtonDown(0))
         {
@@ -47,4 +48,24 @@ public class PlayerShoot : MonoBehaviour
             projectile.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
         }
     }
+    private void FindClosestEnemy()
+    {
+        float closestDistance = Mathf.Infinity;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distanceToEnemy = Vector3.Distance(playerTransform.position, enemy.transform.position);
+            if (distanceToEnemy < closestDistance)
+            {
+                closestDistance = distanceToEnemy;
+                closestEnemy = enemy;
+            }
+        }
+        if (enemies.Length == 0)
+        {
+            closestEnemy = null;
+        }
+    }
 }
+
