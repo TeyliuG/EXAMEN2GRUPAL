@@ -32,7 +32,7 @@ public class Enemy3 : MonoBehaviour
 
             if (distancia < 1f)
             {
-                player.GetComponent<player>().RecibirDaño(daño);
+                //player.GetComponent<player>().RecibirDaño(daño);
             }
         }
     }
