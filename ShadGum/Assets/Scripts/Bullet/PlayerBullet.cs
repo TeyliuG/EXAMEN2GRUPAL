@@ -26,4 +26,8 @@ public class PlayerBullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void AddDamage()
+    {
+        Damage += 10;
+    }
 }
